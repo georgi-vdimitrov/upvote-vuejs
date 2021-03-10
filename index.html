@@ -10,12 +10,12 @@
     <h2 class="title has-text-centered dividing-header">{{ title }}</h2>
     <div class="section">
         <article v-for="entry in sortedEntries"
-                 v-bind:key="entry.id"
+                 :key="entry.id"
                  class="media"
-                 v-bind:class="{ 'blue-border': entry.votes >= 20 }">
+                 :class="{ 'blue-border': entry.votes >= 20 }">
             <entry-component
-                    v-bind:entry="entry"
-                    v-bind:entries="sortedEntries">
+                    :entry="entry"
+                    :entries="sortedEntries">
             </entry-component>
         </article>
     </div>
